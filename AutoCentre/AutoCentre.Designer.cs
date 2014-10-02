@@ -34,13 +34,13 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.authorLabel = new System.Windows.Forms.Label();
             this.accessoriesGroupBox = new System.Windows.Forms.GroupBox();
-            this.exteriorFinishGroupBox = new System.Windows.Forms.GroupBox();
             this.stereoSystemCheckBox = new System.Windows.Forms.CheckBox();
             this.leatherInteriorCheckBox = new System.Windows.Forms.CheckBox();
             this.computerNavigationCheckBox = new System.Windows.Forms.CheckBox();
-            this.standardRadioButton = new System.Windows.Forms.RadioButton();
-            this.peralizedRadioButton = new System.Windows.Forms.RadioButton();
+            this.exteriorFinishGroupBox = new System.Windows.Forms.GroupBox();
             this.customizedDetailingRadioButton = new System.Windows.Forms.RadioButton();
+            this.peralizedRadioButton = new System.Windows.Forms.RadioButton();
+            this.standardRadioButton = new System.Windows.Forms.RadioButton();
             this.carSalesPriceLabel = new System.Windows.Forms.Label();
             this.accessoriesFinishLabel = new System.Windows.Forms.Label();
             this.subtotalLabel = new System.Windows.Forms.Label();
@@ -122,18 +122,6 @@
             this.accessoriesGroupBox.TabStop = false;
             this.accessoriesGroupBox.Text = "Accessories";
             // 
-            // exteriorFinishGroupBox
-            // 
-            this.exteriorFinishGroupBox.Controls.Add(this.customizedDetailingRadioButton);
-            this.exteriorFinishGroupBox.Controls.Add(this.peralizedRadioButton);
-            this.exteriorFinishGroupBox.Controls.Add(this.standardRadioButton);
-            this.exteriorFinishGroupBox.Location = new System.Drawing.Point(12, 242);
-            this.exteriorFinishGroupBox.Name = "exteriorFinishGroupBox";
-            this.exteriorFinishGroupBox.Size = new System.Drawing.Size(200, 154);
-            this.exteriorFinishGroupBox.TabIndex = 1;
-            this.exteriorFinishGroupBox.TabStop = false;
-            this.exteriorFinishGroupBox.Text = "Exterior Finish";
-            // 
             // stereoSystemCheckBox
             // 
             this.stereoSystemCheckBox.AutoSize = true;
@@ -164,16 +152,28 @@
             this.computerNavigationCheckBox.Text = "Computer &Navigation";
             this.computerNavigationCheckBox.UseVisualStyleBackColor = true;
             // 
-            // standardRadioButton
+            // exteriorFinishGroupBox
             // 
-            this.standardRadioButton.AutoSize = true;
-            this.standardRadioButton.Location = new System.Drawing.Point(6, 31);
-            this.standardRadioButton.Name = "standardRadioButton";
-            this.standardRadioButton.Size = new System.Drawing.Size(68, 17);
-            this.standardRadioButton.TabIndex = 0;
-            this.standardRadioButton.TabStop = true;
-            this.standardRadioButton.Text = "S&tandard";
-            this.standardRadioButton.UseVisualStyleBackColor = true;
+            this.exteriorFinishGroupBox.Controls.Add(this.customizedDetailingRadioButton);
+            this.exteriorFinishGroupBox.Controls.Add(this.peralizedRadioButton);
+            this.exteriorFinishGroupBox.Controls.Add(this.standardRadioButton);
+            this.exteriorFinishGroupBox.Location = new System.Drawing.Point(12, 242);
+            this.exteriorFinishGroupBox.Name = "exteriorFinishGroupBox";
+            this.exteriorFinishGroupBox.Size = new System.Drawing.Size(200, 154);
+            this.exteriorFinishGroupBox.TabIndex = 1;
+            this.exteriorFinishGroupBox.TabStop = false;
+            this.exteriorFinishGroupBox.Text = "Exterior Finish";
+            // 
+            // customizedDetailingRadioButton
+            // 
+            this.customizedDetailingRadioButton.AutoSize = true;
+            this.customizedDetailingRadioButton.Location = new System.Drawing.Point(6, 117);
+            this.customizedDetailingRadioButton.Name = "customizedDetailingRadioButton";
+            this.customizedDetailingRadioButton.Size = new System.Drawing.Size(123, 17);
+            this.customizedDetailingRadioButton.TabIndex = 2;
+            this.customizedDetailingRadioButton.TabStop = true;
+            this.customizedDetailingRadioButton.Text = "Customized &Detailing";
+            this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
             // 
             // peralizedRadioButton
             // 
@@ -186,16 +186,16 @@
             this.peralizedRadioButton.Text = "&Pearlized";
             this.peralizedRadioButton.UseVisualStyleBackColor = true;
             // 
-            // customizedDetailingRadioButton
+            // standardRadioButton
             // 
-            this.customizedDetailingRadioButton.AutoSize = true;
-            this.customizedDetailingRadioButton.Location = new System.Drawing.Point(6, 117);
-            this.customizedDetailingRadioButton.Name = "customizedDetailingRadioButton";
-            this.customizedDetailingRadioButton.Size = new System.Drawing.Size(123, 17);
-            this.customizedDetailingRadioButton.TabIndex = 2;
-            this.customizedDetailingRadioButton.TabStop = true;
-            this.customizedDetailingRadioButton.Text = "Customized &Detailing";
-            this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
+            this.standardRadioButton.AutoSize = true;
+            this.standardRadioButton.Location = new System.Drawing.Point(6, 31);
+            this.standardRadioButton.Name = "standardRadioButton";
+            this.standardRadioButton.Size = new System.Drawing.Size(68, 17);
+            this.standardRadioButton.TabIndex = 0;
+            this.standardRadioButton.TabStop = true;
+            this.standardRadioButton.Text = "S&tandard";
+            this.standardRadioButton.UseVisualStyleBackColor = true;
             // 
             // carSalesPriceLabel
             // 
@@ -269,33 +269,33 @@
             // 
             // accessoriesFinishTextBox
             // 
-            this.accessoriesFinishTextBox.Enabled = false;
             this.accessoriesFinishTextBox.Location = new System.Drawing.Point(471, 136);
             this.accessoriesFinishTextBox.Name = "accessoriesFinishTextBox";
+            this.accessoriesFinishTextBox.ReadOnly = true;
             this.accessoriesFinishTextBox.Size = new System.Drawing.Size(155, 20);
             this.accessoriesFinishTextBox.TabIndex = 10;
             // 
             // subtotalTextBox
             // 
-            this.subtotalTextBox.Enabled = false;
             this.subtotalTextBox.Location = new System.Drawing.Point(471, 182);
             this.subtotalTextBox.Name = "subtotalTextBox";
+            this.subtotalTextBox.ReadOnly = true;
             this.subtotalTextBox.Size = new System.Drawing.Size(155, 20);
             this.subtotalTextBox.TabIndex = 12;
             // 
             // salesTaxTextBox
             // 
-            this.salesTaxTextBox.Enabled = false;
             this.salesTaxTextBox.Location = new System.Drawing.Point(471, 228);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
+            this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(155, 20);
             this.salesTaxTextBox.TabIndex = 14;
             // 
             // totalTextBox
             // 
-            this.totalTextBox.Enabled = false;
             this.totalTextBox.Location = new System.Drawing.Point(471, 274);
             this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(155, 20);
             this.totalTextBox.TabIndex = 16;
             // 
@@ -308,9 +308,9 @@
             // 
             // amountDueTextBox
             // 
-            this.amountDueTextBox.Enabled = false;
             this.amountDueTextBox.Location = new System.Drawing.Point(471, 366);
             this.amountDueTextBox.Name = "amountDueTextBox";
+            this.amountDueTextBox.ReadOnly = true;
             this.amountDueTextBox.Size = new System.Drawing.Size(155, 20);
             this.amountDueTextBox.TabIndex = 18;
             // 
