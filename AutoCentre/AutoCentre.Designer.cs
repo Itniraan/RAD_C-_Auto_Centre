@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.calculateButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.tradeInAllowanceTextBox = new System.Windows.Forms.TextBox();
             this.amountDueTextBox = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.accessoriesGroupBox.SuspendLayout();
             this.exteriorFinishGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +120,7 @@
             this.accessoriesGroupBox.Location = new System.Drawing.Point(12, 80);
             this.accessoriesGroupBox.Name = "accessoriesGroupBox";
             this.accessoriesGroupBox.Size = new System.Drawing.Size(200, 143);
-            this.accessoriesGroupBox.TabIndex = 0;
+            this.accessoriesGroupBox.TabIndex = 4;
             this.accessoriesGroupBox.TabStop = false;
             this.accessoriesGroupBox.Text = "Accessories";
             // 
@@ -130,6 +132,7 @@
             this.stereoSystemCheckBox.Size = new System.Drawing.Size(94, 17);
             this.stereoSystemCheckBox.TabIndex = 0;
             this.stereoSystemCheckBox.Text = "&Stereo System";
+            this.toolTip1.SetToolTip(this.stereoSystemCheckBox, "Click to add Stereo System option to your car");
             this.stereoSystemCheckBox.UseVisualStyleBackColor = true;
             // 
             // leatherInteriorCheckBox
@@ -140,6 +143,7 @@
             this.leatherInteriorCheckBox.Size = new System.Drawing.Size(97, 17);
             this.leatherInteriorCheckBox.TabIndex = 1;
             this.leatherInteriorCheckBox.Text = "Leather &Interior";
+            this.toolTip1.SetToolTip(this.leatherInteriorCheckBox, "Click to add Leather Interior option to your car");
             this.leatherInteriorCheckBox.UseVisualStyleBackColor = true;
             // 
             // computerNavigationCheckBox
@@ -150,6 +154,7 @@
             this.computerNavigationCheckBox.Size = new System.Drawing.Size(125, 17);
             this.computerNavigationCheckBox.TabIndex = 2;
             this.computerNavigationCheckBox.Text = "Computer &Navigation";
+            this.toolTip1.SetToolTip(this.computerNavigationCheckBox, "Click to add Computer Navigation option to your car");
             this.computerNavigationCheckBox.UseVisualStyleBackColor = true;
             // 
             // exteriorFinishGroupBox
@@ -160,7 +165,7 @@
             this.exteriorFinishGroupBox.Location = new System.Drawing.Point(12, 242);
             this.exteriorFinishGroupBox.Name = "exteriorFinishGroupBox";
             this.exteriorFinishGroupBox.Size = new System.Drawing.Size(200, 154);
-            this.exteriorFinishGroupBox.TabIndex = 1;
+            this.exteriorFinishGroupBox.TabIndex = 5;
             this.exteriorFinishGroupBox.TabStop = false;
             this.exteriorFinishGroupBox.Text = "Exterior Finish";
             // 
@@ -173,7 +178,9 @@
             this.customizedDetailingRadioButton.TabIndex = 2;
             this.customizedDetailingRadioButton.TabStop = true;
             this.customizedDetailingRadioButton.Text = "Customized &Detailing";
+            this.toolTip1.SetToolTip(this.customizedDetailingRadioButton, "Click to add Customized Detailing Exterior Finish to your car");
             this.customizedDetailingRadioButton.UseVisualStyleBackColor = true;
+            this.customizedDetailingRadioButton.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // peralizedRadioButton
             // 
@@ -184,7 +191,9 @@
             this.peralizedRadioButton.TabIndex = 1;
             this.peralizedRadioButton.TabStop = true;
             this.peralizedRadioButton.Text = "&Pearlized";
+            this.toolTip1.SetToolTip(this.peralizedRadioButton, "Click to add Pearlized Exterior Finish to your car");
             this.peralizedRadioButton.UseVisualStyleBackColor = true;
+            this.peralizedRadioButton.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // standardRadioButton
             // 
@@ -195,7 +204,9 @@
             this.standardRadioButton.TabIndex = 0;
             this.standardRadioButton.TabStop = true;
             this.standardRadioButton.Text = "S&tandard";
+            this.toolTip1.SetToolTip(this.standardRadioButton, "Click to add Standard Exterior Finish to your car");
             this.standardRadioButton.UseVisualStyleBackColor = true;
+            this.standardRadioButton.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
             // 
             // carSalesPriceLabel
             // 
@@ -203,7 +214,7 @@
             this.carSalesPriceLabel.Location = new System.Drawing.Point(368, 93);
             this.carSalesPriceLabel.Name = "carSalesPriceLabel";
             this.carSalesPriceLabel.Size = new System.Drawing.Size(82, 13);
-            this.carSalesPriceLabel.TabIndex = 2;
+            this.carSalesPriceLabel.TabIndex = 0;
             this.carSalesPriceLabel.Text = "C&ar Sales Price:";
             // 
             // accessoriesFinishLabel
@@ -248,7 +259,7 @@
             this.tradeInAllowanceLabel.Location = new System.Drawing.Point(348, 323);
             this.tradeInAllowanceLabel.Name = "tradeInAllowanceLabel";
             this.tradeInAllowanceLabel.Size = new System.Drawing.Size(102, 13);
-            this.tradeInAllowanceLabel.TabIndex = 4;
+            this.tradeInAllowanceLabel.TabIndex = 2;
             this.tradeInAllowanceLabel.Text = "T&rade-In Allowance:";
             // 
             // amountDueLabel
@@ -265,7 +276,8 @@
             this.carSalesPriceTextBox.Location = new System.Drawing.Point(471, 90);
             this.carSalesPriceTextBox.Name = "carSalesPriceTextBox";
             this.carSalesPriceTextBox.Size = new System.Drawing.Size(155, 20);
-            this.carSalesPriceTextBox.TabIndex = 3;
+            this.carSalesPriceTextBox.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.carSalesPriceTextBox, "How much the car is selling for");
             // 
             // accessoriesFinishTextBox
             // 
@@ -274,6 +286,7 @@
             this.accessoriesFinishTextBox.ReadOnly = true;
             this.accessoriesFinishTextBox.Size = new System.Drawing.Size(155, 20);
             this.accessoriesFinishTextBox.TabIndex = 10;
+            this.accessoriesFinishTextBox.TabStop = false;
             // 
             // subtotalTextBox
             // 
@@ -282,6 +295,7 @@
             this.subtotalTextBox.ReadOnly = true;
             this.subtotalTextBox.Size = new System.Drawing.Size(155, 20);
             this.subtotalTextBox.TabIndex = 12;
+            this.subtotalTextBox.TabStop = false;
             // 
             // salesTaxTextBox
             // 
@@ -290,6 +304,7 @@
             this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(155, 20);
             this.salesTaxTextBox.TabIndex = 14;
+            this.salesTaxTextBox.TabStop = false;
             // 
             // totalTextBox
             // 
@@ -298,13 +313,15 @@
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(155, 20);
             this.totalTextBox.TabIndex = 16;
+            this.totalTextBox.TabStop = false;
             // 
             // tradeInAllowanceTextBox
             // 
             this.tradeInAllowanceTextBox.Location = new System.Drawing.Point(471, 320);
             this.tradeInAllowanceTextBox.Name = "tradeInAllowanceTextBox";
             this.tradeInAllowanceTextBox.Size = new System.Drawing.Size(155, 20);
-            this.tradeInAllowanceTextBox.TabIndex = 5;
+            this.tradeInAllowanceTextBox.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.tradeInAllowanceTextBox, "How much the car you are trading in is worth");
             // 
             // amountDueTextBox
             // 
@@ -313,6 +330,7 @@
             this.amountDueTextBox.ReadOnly = true;
             this.amountDueTextBox.Size = new System.Drawing.Size(155, 20);
             this.amountDueTextBox.TabIndex = 18;
+            this.amountDueTextBox.TabStop = false;
             // 
             // autoCentreForm
             // 
@@ -386,6 +404,7 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.TextBox tradeInAllowanceTextBox;
         private System.Windows.Forms.TextBox amountDueTextBox;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
